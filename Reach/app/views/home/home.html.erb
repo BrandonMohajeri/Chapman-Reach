@@ -14,13 +14,17 @@
 		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold"/>
-		<link rel="shortcut icon" href="http://upload.wikimedia.org/wikipedia/en/6/6e/Chapman_University_logo.gif">
-
+		
 		<!-- css -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/css/style.css" media="screen"/>
-
+		<link rel="stylesheet" href="../assets/stylesheets/bootstrap.min.css">
+		<link rel="stylesheet" href="../assets/stylesheets/font-awesome.min.css">
+		<link rel="stylesheet" href="../assets/stylesheets/style.css" media="screen"/>
+		<script type="text/javascript" src="../assets/js/login.js"></script>
+		<link rel="stylesheet" href="../assets/stylesheets/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" href="../assets/stylesheets/special.css"> <!-- Gem style -->
+		<script src="../assets/js/modernizr.js"></script> <!-- Modernizr -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="../assets/js/main.js"></script> <!-- Gem jQuery -->
 	</head>
 	
 	<body>
@@ -35,10 +39,118 @@
 							Your final course managment solution
 						</div>
 				</section>
+				<div class="row">
+					<nav class="main-nav">
+						<a href="#0" class="middle btn btn-o-login btn-lg">Log In</a>
+	 				</nav>
+	    			<a href="#about" class="middle btn btn-o-findmore btn-lg">Find Out More</a>
+	    		</div>
+
+<!-- 
+				<nav class="main-nav">
+					<ul>
+						<li><a href="#0" class="middle btn btn-o-login btn-lg">Log In</a></li>
+						<li><a href="#about" class="middle btn btn-o-findmore btn-lg">Find Out More</a></li>
+					 </ul>
+				</nav>
+
+ -->
+
+
 			</div><!-- header -->
+
+			<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+				<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+					<ul class="cd-switcher">
+						<li><a href="#0">Sign in</a></li>
+						<li><a href="#0">New account</a></li>
+					</ul>
+
+					<div id="cd-login"> <!-- log in form -->
+						<form class="cd-form">
+							<p class="fieldset">
+								<label class="image-replace cd-email" for="signin-email">E-mail</label>
+								<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+								<span class="cd-error-message">Error</span>
+							</p>
+
+							<p class="fieldset">
+								<label class="image-replace cd-password" for="signin-password">Password</label>
+								<input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Password">
+								<span class="cd-error-message">Error</span>
+							</p>
+
+							<p class="fieldset">
+								<input type="checkbox" id="remember-me" checked>
+								<label for="remember-me">Remember me</label>
+							</p>
+
+							<p class="fieldset">
+								<input class="full-width" type="submit" value="Login">
+							</p>
+						</form>
+						
+						<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+						<!-- <a href="#0" class="cd-close-form">Close</a> -->
+					</div> <!-- cd-login -->
+
+					<div id="cd-signup"> <!-- sign up form -->
+						<form class="cd-form">
+							<p class="fieldset">
+								<label class="image-replace cd-email" for="signup-email">E-mail</label>
+								<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+								<span class="cd-error-message">Error</span>
+							</p>
+
+							<p class="fieldset">
+								<label class="image-replace cd-password" for="signup-password">Password</label>
+								<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password">
+								<span class="cd-error-message">Error</span>
+							</p>
+							<p class="fieldset">
+								<label class="image-replace cd-password" for="signup-password">Confirm Password</label>
+								<input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Confirm Password">
+								<span class="cd-error-message">Error</span>
+							</p>
+
+							<p class="fieldset">
+
+								<input type="checkbox" id="accept-terms">
+								<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+							</p>
+
+							<p class="fieldset">
+								<input class="full-width has-padding" type="submit" value="Create account">
+							</p>
+						</form>
+
+						<!-- <a href="#0" class="cd-close-form">Close</a> -->
+					</div> <!-- cd-signup -->
+
+					<div id="cd-reset-password"> <!-- reset password form -->
+						<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+						<form class="cd-form">
+							<p class="fieldset">
+								<label class="image-replace cd-email" for="reset-email">E-mail</label>
+								<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+								<span class="cd-error-message">Error</span>
+							</p>
+
+							<p class="fieldset">
+								<input class="full-width has-padding" type="submit" value="Reset password">
+							</p>
+						</form>
+
+						<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+					</div> <!-- cd-reset-password -->
+					<a href="#0" class="cd-close-form">Close</a>
+				</div> <!-- cd-user-modal-container -->
+			</div> <!-- cd-user-modal -->
 
 			<!-- About us -->
         <div id="about" class="about-us">
+
             <div class="container about-sec">
                 <header class="block-heading cleafix">
 						<div class="title-page">
@@ -48,25 +160,25 @@
 					</header>
                 <div class="divide50"></div>
                 <div class="row">
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-6 text-center">
                         <div class="aboutus-item">
                             <i class="aboutus-icon fa fa-plane"></i>
-                            <h4 class="aboutus-title">Great Transport</h4>
-                            <p class="aboutus-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.</p>
+                            <h4 class="aboutus-title">Simplicity</h4>
+                            <p class="aboutus-desc">Thanks to our friendly user interface, we let students spant more time learning while we handle all the rest</p>
                         </div>
                     </div>
-                    <div class="col-md-4 text-center">
+<!--                     <div class="col-md-4 text-center">
                         <div class="aboutus-item">
                             <i class="aboutus-icon fa fa-usd"></i>
-                            <h4 class="aboutus-title">Not Expensive</h4>
-                            <p class="aboutus-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.</p>
+                            <h4 class="aboutus-title">____________</h4>
+                            <p class="aboutus-desc">____________ ____________ ____________ ____________ ____________ ____________ ____________ ____________ ____________ ____________</p>
                         </div>
-                    </div>
-                    <div class="col-md-4 text-center">
+                    </div> -->
+                    <div class="col-md-6 text-center">
                         <div class="aboutus-item">
                             <i class="aboutus-icon fa fa-cutlery"></i>
-                            <h4 class="aboutus-title">Delicious Food</h4>
-                            <p class="aboutus-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.</p>
+                            <h4 class="aboutus-title">Security</h4>
+                            <p class="aboutus-desc">At Reach, your security is our priority. This is why only you will have access to all of your personal data, and only Chapman students with a valid email can search and view course pages</p>
                         </div>
                     </div>
                 </div>
@@ -120,43 +232,43 @@
 						</div>
 					</section>
 				</div>
-			</div><!-- #portfolio --> -->
+			</div>#portfolio -->
 
 			<div class="content-block parallax" id="services">
 				<div class="container services-sec">
 					<div class="title-page">
-						<p class="main-header">Our Services </p>
-					    <p class="sub-header">A little about what we do</p>
+						<p class="main-header-white">Our Services</p>
+					    <p class="sub-header-white">A little about what we do</p>
 					</div>
 					<section class="block-body">
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-6">
 								<div class="service">
 									<div class="bar">
 										<i class="fa fa-send-o"></i>
 									</div>
 									<h2 class="service-head">4-Year Plan</h2>
-									<p>Save yourself the trip to academic counseling. Shorly after creating your account, Reach uses our advanced algorithm to generate your 4-year plan in just minutes.</p>
+									<p>Save yourself the trip to academic counseling. Shortly after creating your account, Reach uses our advanced algorithm to generate your 4-year plan in just minutes!</p>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-6">
 								<div class="service">
 									<div class="bar">
 										<i class="fa fa-heart-o"></i>
 									</div>	
 									<h2 class="service-head">Course Scheduling</h2>
-									<p>Save yourself the trip to your academic counselor. Shorly after creating your account, Reach uses our advanced algorithm to generate your 4-year plan in just minutes.</p>
+									<p>Stop wasting time trying to make your perfect schedule for the semester. Let us do that for you. List the classes you want to take as well as your prefered time and Reach will create your schedule for you, hassle free! </p>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<!-- <div class="col-md-4">
 								<div class="service">
 									<div class="bar">
 										<i class="fa fa-camera-retro"></i>
 									</div>	
 									<h2 class="service-head">____________</h2>
-									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
+									<p>____________ ____________ ____________ ____________ ____________ ____________ ____________ ____________ ____________ ____________ ____________ ____________</p>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</section>
 				</div>
@@ -198,17 +310,17 @@
 						</div>
 					</section>
 				</div>
-			</div><!-- #blog --> -->
+			</div> #blog --> 
 
 
 			<div class="content-block parallax" id="parallax">
 				<div class="container">
-					<h3 class="call-action pull-left">In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis.</h3>
-					<a href="#" class="pull-right btn btn-o-white btn-lg">Reach Today</a>
+					<h3 class="call-action pull-left">Build your dream schedule in just seconds.</h3>
+					<nav class="main-nav"><a href="#0" class="pull-right btn btn-o-white btn-lg">Reach Today</a></nav>
 				</div>
 			</div><!-- #parallax -->
 
-			<div class="content-block" id="testimonials">
+			<!-- <div class="content-block" id="testimonials">
 				<div class="container testimonial-sec">
 
 					<header class="block-heading cleafix">
@@ -220,17 +332,17 @@
 					
 					<section class="block-body">
 						<div class="row">
-							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> -->
 							  <!-- Indicators -->
-							  <ol class="carousel-indicators">
+							  <!-- <ol class="carousel-indicators">
 							    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 							    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 							    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-							  </ol>
+							  </ol> -->
 
 
 							  <!-- Wrapper for slides -->
-							  <div class="carousel-inner" role="listbox">
+							  <!-- <div class="carousel-inner" role="listbox">
 							    <div class="item active">
 							      <div class="img-center">	
 							      	<img class="img-circle circular-img" src="assets/images/01_200x200.png">
@@ -260,17 +372,16 @@
 						</div>	
 					</section>
 				</div>
-			</div><!-- /#testimonials -->
+			</div> --><!-- /#testimonials -->
 
 			<div class="content-block" id="footer">
 				<div class="container">
 					<div class="row">
-							<div class="col-sm-4 blog-post">
-								
+							<div class="col-sm-3 blog-post">								
 								<h2 class="footer-block">Have a question</h2>
-								<p>Here at Reach, your words add value to our wisdom...</p>
+								<p>Here at Reach, your words add value to our wisdom.</p>
 
-								<p>We are always trying to grow, and that can't happen without the support of the Chapman community. Reach is build by Chapman student for Chapman students so please leave any feedback or support. Our team thanks you for your support.
+								<p>We are always trying to grow, and that can't happen without the support of the Chapman community. Reach is build by Chapman students for Chapman students so please leave any feedback or support. Our team thanks you for your support.
 								</p>
 
 								<p>For any business inquiries, please leave us a message!</p>
@@ -292,7 +403,8 @@
 								  	</div>
 								</form>
 							</div>
-							<div class="col-sm-4 blog-post">
+							<div class="col-md-1"></div>
+							<div class="col-sm-4 blog-post text-left">
 								
 								<h2 class="footer-block">Contact Details</h2>
 								<ul>
@@ -309,8 +421,6 @@
 										<p>
 											<a href="mailto:chapmanreach@gmail.com">chapmanreach@gmail.com</a><br>
 										</p>
-
-
 								</ul>
 								<div class="social">
 									<a href="#"><i class="fa fa-twitter"></i></a>
@@ -336,8 +446,12 @@
 
 		</div><!--/#wrapper-->
 
+		<!-- This will be become the login screen
+		<div class=
 
 
+
+		-->
 
 		<script src="assets/js/jquery-2.1.3.min.js"></script>
 		<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
@@ -376,7 +490,6 @@
 
 
 		</script>
-
 
 	</body>
 </html>
