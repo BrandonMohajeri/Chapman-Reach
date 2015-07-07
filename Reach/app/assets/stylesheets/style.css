@@ -381,7 +381,7 @@ h1.logo {
 }
 
 #header {
-  background-image: url("./header-bg.jpg");
+  background-image: url(./header-bg.jpg);
   /*box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);*/
 }
 #services {
@@ -393,7 +393,7 @@ h1.logo {
   background: #db5252;
 }
 #contact {
-  background-image: url(../images/newsletter-bg.png);
+  background-image: url(./newsletter-bg.png);
   color: white;
   background-color: #405162;
 }
@@ -771,5 +771,11 @@ hr {
   color: #000;
   height: 2px;
 }
+
+
+
+
+
+
 
 
