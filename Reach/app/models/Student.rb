@@ -1,6 +1,8 @@
 
 
 
+
+
 class Student 
 
 	attr_reader :studentUsername
@@ -12,14 +14,16 @@ class Student
 	attr_accessor :studentMajor
 
 
-	def initialize(user, pass, email, firstName, lastName, middleInitial, major = "undeclared")
+	def initialize(user, pass, email, firstName, lastName, middleInitial, major = "undeclare")
  		@studentUsername = user
  		@studentPassword = pass
  		@studentEmail = email
  		@studentFirstName = firstName
  		@studentLastName = lastName
  		@studentMiddleInitial = middleInitial
- 		@studentMajor = major
+ 		@studentMajor = new Major(major);
+ 		@studentCompleteClasses = Array.new;
+ 		
 	end
 
 

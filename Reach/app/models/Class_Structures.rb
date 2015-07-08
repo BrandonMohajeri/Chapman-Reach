@@ -37,7 +37,7 @@ end
 
 
 class Major
-	def initialize
+	def initialize (major)
 		@ge_requirements = GERequirements.new
 		@lower_divisions = LowerDivisionRequirements.new
 		@upper_divisions = UpperDivisionRequirements.new
